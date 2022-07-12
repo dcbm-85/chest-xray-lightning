@@ -1,0 +1,26 @@
+# data
+train_csv: data/train.csv
+test_csv: data/test.csv
+val_csv: data/val.csv
+data_dir: data/
+
+# output
+output_path: test_metrics.csv
+
+# tasks
+tasks: ['Atelectasis', 'Cardiomegaly', 'Consolidation', 'Edema', 'Pleural Effusion']
+num_classes: 5
+
+# model
+arch: "densenet121"
+global_pool: "avgmax"
+ckpt_path: util/chexpert_model.ckpt
+
+# loader
+test_batch_size: 64
+num_workers: 8
+
+# Test transforms
+scale: 256
+crop: 224 
+
